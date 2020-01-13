@@ -91,3 +91,41 @@ sharding.jdbc.config.sharding.tables.t_order_item.table-strategy.complex.algorit
 SELECT * from `db1`.t_order1_0;
 SELECT* from `db1`.t_order_item1_0
 ```
+
+## 3. Hint路由分片
+下载地址：https://github.com/ssy-githup/shardingjdbc/archive/v1.2.zip
+新增 **HintApplicationTests** hint分片测试类；**application-sharding-hint.properties**文件和sql文件中新增部分表；
+
+### 3.2 测试使用在test包下测试类（HintApplicationTests）进行测试
+配置文件中对应的配置类： config包下的 HintShardingKeyAlgorithm
+
+```csharp
+# 分库配置
+sharding.jdbc.config.sharding.default-database-strategy.inline.sharding-column=user_id
+sharding.jdbc.config.sharding.default-database-strategy.inline.algorithm-expression=db$->{user_id % 2}
+
+# t_order强制分片配置
+sharding.jdbc.config.sharding.tables.t_order.actual-data-nodes=db$->{0..1}.t_order$->{0..1}
+#映射到  sharedingSpaher的配置类
+sharding.jdbc.config.sharding.tables.t_order.database-strategy.hint.algorithm-class-name=ai.ssy.config.HintShardingKeyAlgorithm
+sharding.jdbc.config.sharding.tables.t_order.table-strategy.hint.algorithm-class-name=ai.ssy.config.HintShardingKeyAlgorithm
+
+sharding.jdbc.config.props.sql.show=true
+```
+2.3 结果展示
+对应的日志信息：
+
+```csharp
+2020-01-13 11:25:20.976  INFO 11056 --- [           main] ShardingSphere-SQL                       : Rule Type: sharding
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Logic SQL: SELECT * FROM t_order;
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : SQLStatement: SelectStatement(super=DQLStatement(super=io.shardingsphere.core.parsing.parser.sql.dql.select.SelectStatement@49433c98), containStar=true, firstSelectItemStartPosition=7, selectListLastPosition=9, groupByLastPosition=0, items=[StarSelectItem(owner=Optional.absent())], groupByItems=[], orderByItems=[], limit=null, subQueryStatement=null, subQueryStatements=[], subQueryConditions=[])
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db0 ::: SELECT * FROM t_order0_0;
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db0 ::: SELECT * FROM t_order0_1;
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db0 ::: SELECT * FROM t_order1_0;
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db0 ::: SELECT * FROM t_order1_1;
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db1 ::: SELECT * FROM t_order0_0;
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db1 ::: SELECT * FROM t_order0_1;
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db1 ::: SELECT * FROM t_order1_0;
+2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db1 ::: SELECT * FROM t_order1_1;
+[Order{id=1, userId=0, orderId=0}, Order{id=2, userId=0, orderId=0}]
+```
