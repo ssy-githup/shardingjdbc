@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82457e73-1787-4620-a31a-ec25d1e6377c" name="Default Changelist" comment="" />
+    <list default="true" id="82457e73-1787-4620-a31a-ec25d1e6377c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-master-slave.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ai/ssy/MaterSlaveApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ai/ssy/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ai/ssy/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ai/ssy/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-sharding-complex.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-sharding-complex.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-sharding-hint.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-sharding-hint.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Order.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Order.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ai/ssy/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -59,11 +70,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ai.ssy" />
       <recent name="ai.ssy.config.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\java\ai\ssy\config" />
       <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\resources" />
+      <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\java\ai\ssy\config" />
       <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\test\java\ai\ssy" />
       <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\java\ai\ssy" />
       <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc" />
@@ -81,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HintApplicationTests">
+  <component name="RunManager" selected="JUnit.MaterSlaveApplicationTests.test">
     <configuration name="BroadcastTableApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sharding-jdbc" />
       <extension name="coverage">
@@ -145,7 +157,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StandardShardingApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaterSlaveApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sharding-jdbc" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +166,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ai.ssy" />
-      <option name="MAIN_CLASS_NAME" value="ai.ssy.StandardShardingApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="MAIN_CLASS_NAME" value="ai.ssy.MaterSlaveApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HintApplicationTests" />
+        <item itemvalue="JUnit.MaterSlaveApplicationTests.test" />
         <item itemvalue="JUnit.HintApplicationTests.test" />
+        <item itemvalue="JUnit.HintApplicationTests" />
         <item itemvalue="JUnit.ComplexShardingApplicationTests.test" />
         <item itemvalue="JUnit.BroadcastTableApplicationTests.test" />
-        <item itemvalue="JUnit.StandardShardingApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +196,7 @@
       <workItem from="1578636603987" duration="973000" />
       <workItem from="1578637603599" duration="7521000" />
       <workItem from="1578657892903" duration="1443000" />
-      <workItem from="1578876003485" duration="8198000" />
+      <workItem from="1578876003485" duration="14514000" />
     </task>
     <task id="LOCAL-00001" summary="广播表测试类">
       <created>1578877699174</created>

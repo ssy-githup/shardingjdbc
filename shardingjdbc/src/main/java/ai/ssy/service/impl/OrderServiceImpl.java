@@ -30,4 +30,15 @@ public class OrderServiceImpl implements OrderService {
         return orderMapper.queryOrderByHint();
     }
 
+    @Override
+    public Integer saveOrder(Order order) {
+        return orderMapper.saveOrder(order);
+    }
+
+    @Override
+    public Order findOrderById(int i) {
+        System.out.println("请求参数为="+i);
+        return orderMapper.findOrderById(i);
+    }
+
 }

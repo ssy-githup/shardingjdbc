@@ -18,4 +18,8 @@ public interface OrderService {
     * @date:
     */
     public List<Order> queryOrderByHint();
+
+    Integer saveOrder(Order order);
+
+    Order findOrderById(int i);
 }
