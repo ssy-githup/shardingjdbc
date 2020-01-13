@@ -1,4 +1,4 @@
-# shardingjdbc
+# shardingSphere
 shardingjdbc标准分片策略
 ## 1.准备工作
 jdk1.8  idea 
