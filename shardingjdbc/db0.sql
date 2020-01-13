@@ -80,3 +80,50 @@ CREATE TABLE `t_province` (
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-----------------V1.2---------------------------
+--复合分片需要的表
+CREATE TABLE `t_order1_0` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `order_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE `t_order1_1` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `order_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_order_item1_0` (
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `brand_name` varchar(255) DEFAULT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
+  `order_date` varchar(255) DEFAULT NULL,
+  `pay_date` varchar(255) DEFAULT NULL,
+  `total_price` float DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `pay_price` float DEFAULT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_order_item1_1` (
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `brand_name` varchar(255) DEFAULT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
+  `order_date` varchar(255) DEFAULT NULL,
+  `pay_date` varchar(255) DEFAULT NULL,
+  `total_price` float DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `pay_price` float DEFAULT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
