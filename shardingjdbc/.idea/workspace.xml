@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82457e73-1787-4620-a31a-ec25d1e6377c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/config/ComplexShardingAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/config/util/LogUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-sharding-complex.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ai/ssy/ComplexShardingApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/config/HintShardingKeyAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-sharding-hint.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ai/ssy/HintApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db0.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ai/ssy/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ai/ssy/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ai/ssy/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ai/ssy/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ai/ssy/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Order.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Order.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ai/ssy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ai/ssy/config" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -73,11 +73,11 @@
       <recent name="ai.ssy.config.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\java\ai\ssy" />
+      <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\java\ai\ssy\config" />
       <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\resources" />
       <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\test\java\ai\ssy" />
+      <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\java\ai\ssy" />
       <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc" />
-      <recent name="D:\newWorkspace\shardingjdbc\shardingjdbc\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ComplexShardingApplicationTests.test">
+  <component name="RunManager" selected="JUnit.HintApplicationTests">
     <configuration name="BroadcastTableApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sharding-jdbc" />
       <extension name="coverage">
@@ -125,6 +125,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HintApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sharding-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ai.ssy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ai.ssy" />
+      <option name="MAIN_CLASS_NAME" value="ai.ssy.HintApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HintApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sharding-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ai.ssy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ai.ssy" />
+      <option name="MAIN_CLASS_NAME" value="ai.ssy.HintApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StandardShardingApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sharding-jdbc" />
       <extension name="coverage">
@@ -141,25 +172,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShardingJdbcApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="sharding-jdbc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ai.ssy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ai.ssy.ShardingJdbcApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HintApplicationTests" />
+        <item itemvalue="JUnit.HintApplicationTests.test" />
         <item itemvalue="JUnit.ComplexShardingApplicationTests.test" />
         <item itemvalue="JUnit.BroadcastTableApplicationTests.test" />
         <item itemvalue="JUnit.StandardShardingApplicationTests.contextLoads" />
-        <item itemvalue="Spring Boot.ShardingJdbcApp" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +195,7 @@
       <workItem from="1578636603987" duration="973000" />
       <workItem from="1578637603599" duration="7521000" />
       <workItem from="1578657892903" duration="1443000" />
-      <workItem from="1578876003485" duration="3127000" />
+      <workItem from="1578876003485" duration="7915000" />
     </task>
     <task id="LOCAL-00001" summary="广播表测试类">
       <created>1578877699174</created>
@@ -223,5 +242,16 @@
     <MESSAGE value="广播表注释" />
     <MESSAGE value="修改application配置文件" />
     <option name="LAST_COMMIT_MESSAGE" value="修改application配置文件" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ai/ssy/config/HintShardingKeyAlgorithm.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

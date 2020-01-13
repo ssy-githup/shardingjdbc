@@ -25,4 +25,9 @@ public class OrderServiceImpl implements OrderService {
         orderItemMapper.save(item);
     }
 
+    @Override
+    public List<Order> queryOrderByHint() {
+        return orderMapper.queryOrderByHint();
+    }
+
 }

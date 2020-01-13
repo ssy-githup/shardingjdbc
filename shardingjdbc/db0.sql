@@ -81,7 +81,7 @@ CREATE TABLE `t_province` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
------------------V1.2---------------------------
+-----------------V1.1---------------------------
 --复合分片需要的表
 CREATE TABLE `t_order1_0` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -126,4 +126,19 @@ CREATE TABLE `t_order_item1_1` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+----------------v1.2----------------------------
+--Hint 强制路由分片
+--在db0 db1中执行
+CREATE TABLE `t_order0_0` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `order_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `t_order0_1` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `order_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

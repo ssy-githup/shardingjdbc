@@ -32,4 +32,13 @@ public class Order implements Serializable {
     public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", orderId=" + orderId +
+                '}';
+    }
 }
