@@ -84,7 +84,7 @@ sharding.jdbc.config.sharding.tables.t_order_item.table-strategy.complex.shardin
 sharding.jdbc.config.sharding.tables.t_order_item.table-strategy.complex.algorithm-class-name=ai.ssy.config.ComplexShardingAlgorithm
 ```
 ### 2.3 结果展示
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202001131000391.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MTMwMDk0,size_16,color_FFFFFF,t_70)
+
 查看数据库
 
 ```sql
