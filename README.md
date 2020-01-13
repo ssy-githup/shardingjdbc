@@ -129,3 +129,34 @@ sharding.jdbc.config.props.sql.show=true
 2020-01-13 11:25:20.977  INFO 11056 --- [           main] ShardingSphere-SQL                       : Actual SQL: db1 ::: SELECT * FROM t_order1_1;
 [Order{id=1, userId=0, orderId=0}, Order{id=2, userId=0, orderId=0}]
 ```
+
+## 4. shardingSpahere读写分离
+下载地址：https://github.com/ssy-githup/shardingjdbc/archive/v1.3.zip
+新增 **MaterSlaveApplicationTests** 读写分离测试类；**application-sharding-hint.properties**文件和sql文件中新增部分表；
+
+### 4.1 测试使用在test包下测试类（HintApplicationTests）进行测试
+
+```csharp
+# 分库配置
+# 读写分离配置
+sharding.jdbc.config.masterslave.name=dataSource
+sharding.jdbc.config.masterslave.load-balance-algorithm-type=round_robin
+#配置master的数据源名称
+sharding.jdbc.config.masterslave.master-data-source-name=master
+#配置slave的数据源名称
+sharding.jdbc.config.masterslave.slave-data-source-names=slave
+
+# 打印SQL
+sharding.jdbc.config.props.sql.show=true
+```
+### 4.2 结果展示
+对应的日志信息：
+
+```csharp
+2020-01-13 14:05:49.563  INFO 12748 --- [           main] ShardingSphere-SQL                       : Rule Type: master-slave
+2020-01-13 14:05:49.563  INFO 12748 --- [           main] ShardingSphere-SQL                       : SQL: INSERT INTO t_order(id,user_id, order_id) VALUES(?,?, ?) ::: DataSources: master
+请求参数为=200
+2020-01-13 14:05:49.604  INFO 12748 --- [           main] ShardingSphere-SQL                       : Rule Type: master-slave
+2020-01-13 14:05:49.604  INFO 12748 --- [           main] ShardingSphere-SQL                       : SQL: select * from t_order where id =? ::: DataSources: slave
+```
+读写分离需要用到mysql数据库的读写分离；测试的时候手动修改从库的数据，可以看到读写使用的是不同数据库
